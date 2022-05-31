@@ -1,0 +1,31 @@
+-   id: go-fmt
+    name: 'go fmt'
+    entry: run-on-docker.sh go/run-go-fmt.sh
+    types: [go]
+    language: 'script'
+    description: "Runs `gofmt`, requires golang"
+-   id: go-imports
+    name: 'go imports'
+    entry: run-on-docker.sh go/run-go-imports.sh
+    types: [go]
+    language: 'script'
+    description: "Runs `gofmt`, requires golang"
+-   id: go-lint
+    name: 'go lint'
+    entry: run-on-docker.sh go/run-golangci-lint.sh
+    types: [go]
+    language: 'script'
+    description: "Runs `gofmt`, requires golang"
+-   id: php-cbf
+    name: 'php cbf'
+    entry: run-on-docker.sh php/php-cbf.sh
+    files: '\.php$'
+    language: 'script'
+    description: "Runs `gofmt`, requires golang"
+-   id: php-unit
+    name: 'php unit'
+    entry: run-on-docker.sh php/php-unit.sh
+    files: '\.php$'
+    language: 'script'
+    description: "Runs `gofmt`, requires golang"
+
