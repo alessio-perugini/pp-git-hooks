@@ -9,23 +9,23 @@
     entry: run-on-docker.sh go/run-go-imports.sh
     types: [go]
     language: 'script'
-    description: "Runs `gofmt`, requires golang"
+    description: "Runs `gomports`, requires golang"
 -   id: go-lint
     name: 'go lint'
     entry: run-on-docker.sh go/run-golangci-lint.sh
     types: [go]
     language: 'script'
-    description: "Runs `gofmt`, requires golang"
+    description: "Runs `golangci-lint`, requires golang"
 -   id: php-cbf
     name: 'php cbf'
     entry: run-on-docker.sh php/php-cbf.sh
     files: '\.php$'
     language: 'script'
-    description: "Runs `gofmt`, requires golang"
+    description: "Runs `phpcbf`, requires php"
 -   id: php-unit
     name: 'php unit'
     entry: run-on-docker.sh php/php-unit.sh
     files: '\.php$'
     language: 'script'
-    description: "Runs `gofmt`, requires golang"
+    description: "Runs `phpunit`, requires php"
 
