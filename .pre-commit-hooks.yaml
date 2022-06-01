@@ -28,4 +28,3 @@
     files: '\.php$'
     language: 'script'
     description: "Runs `phpunit`, requires php"
-

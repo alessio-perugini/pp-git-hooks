@@ -16,6 +16,7 @@ case $LANGUAGE in
     php)
         docker run --rm -v "$PRJ_DIR":/srv -v "$SCRIPTS_DIR:/tmp" prontopro/php:7.4.29-1-dev /tmp/$SCRIPT_NAME "$@"
         ;;
+
     *)
         echo 'not valid language provided'
         exit 1
@@ -23,4 +24,3 @@ case $LANGUAGE in
 esac
 
 exit $?
-

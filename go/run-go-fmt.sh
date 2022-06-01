@@ -12,4 +12,3 @@ fi
 exec 5>&1
 output="$(gofmt -l -w "$@" | tee /dev/fd/5)"
 [[ -z "$output" ]]
-

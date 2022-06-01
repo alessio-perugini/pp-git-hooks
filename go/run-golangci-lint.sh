@@ -9,4 +9,3 @@ if ! command -v golangci-lint &> /dev/null ; then
 fi
 
 exec golangci-lint run "$@"
-
