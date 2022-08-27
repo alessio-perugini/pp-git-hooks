@@ -1,14 +1,9 @@
--   id: go-fmt
-    name: 'go fmt'
-    entry: run-on-docker.sh go/run-go-fmt.sh
-    types: [go]
-    language: 'script'
-    description: "Runs `gofmt`, requires golang"
 -   id: go-imports
     name: 'go imports'
     entry: run-on-docker.sh go/run-go-imports.sh
     types: [go]
     language: 'script'
+    exclude: '.*_gen\.go$'
     description: "Runs `gomports`, requires golang"
 -   id: go-lint
     name: 'go lint'
@@ -16,6 +11,7 @@
     types: [go]
     language: 'script'
     description: "Runs `golangci-lint`, requires golang"
+    pass_filenames: false
 -   id: php-cbf
     name: 'php cbf'
     entry: run-on-docker.sh php/php-cbf.sh

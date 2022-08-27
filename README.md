@@ -25,15 +25,24 @@ repos:
 - repo: https://github.com/alessio-perugini/pp-git-hooks
   rev: main
   hooks:
-    - id: go-fmt
     - id: go-imports
-      args: [--local=github.com/ProntoPro]
+    args:
+      - "--docker-image"
+      - "prontopro/golang:1.19.0-2-dev"
+      - "--local=github.com/ProntoPro"
     - id: go-lint
       args: [-c=.golangci.yml]
     - id: php-cbf
 ```
 
-Then run the `pre-commit install` to set up the git hook scripts
+Then run the `pre-commit install` to set up the git hook scripts.
+If you want to run the script inside a docker container add the args:
+
+```bash
+    args:
+      - "--docker-image"
+      - "prontopro/golang:1.19.0-2-dev"
+```
 
 ## Update hooks
 

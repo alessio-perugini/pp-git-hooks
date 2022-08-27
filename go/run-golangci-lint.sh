@@ -8,4 +8,4 @@ if ! command -v golangci-lint &> /dev/null ; then
     exit 1
 fi
 
-exec golangci-lint run "$@"
+exec golangci-lint run --fix --deadline=5m0s --out-format=line-number "$@"
